@@ -25,7 +25,7 @@ public class MainWindow extends javax.swing.JFrame {
      */
     public MainWindow() {
         initComponents();
-        f = new file("Date.txt");
+        f = new File("Date.txt");
     }
 
     /**
@@ -102,15 +102,14 @@ public class MainWindow extends javax.swing.JFrame {
         //Write to file 
             String data = jTextField1.getText();
             try {
-                FileWrite fw = new FileWrite(f);
+                FileWriter fw = new FileWriter(f);
                 fw.write(data); 
-                jTextField.setText("");
+                jTextField1.setText("");
                 fw.close();
-            } catch (I0Exception ex) {
-                Logger.getLogger(Zapi0dczytDanychDemo.class.getName()).log(level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
             }
     }//GEN-LAST:event_jButtonLoadActionPerformed
-
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
 
     }//GEN-LAST:event_jButtonSaveActionPerformed
@@ -149,7 +148,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
     }
-    File. f;
+    File f;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonLoad;
