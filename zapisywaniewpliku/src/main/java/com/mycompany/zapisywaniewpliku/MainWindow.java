@@ -4,6 +4,16 @@
  */
 package com.mycompany.zapisywaniewpliku;
 
+import java.io.File;
+import java.util.logging.Logger;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author mgrze
@@ -15,6 +25,7 @@ public class MainWindow extends javax.swing.JFrame {
      */
     public MainWindow() {
         initComponents();
+        f = new file("Date.txt");
     }
 
     /**
@@ -101,7 +112,7 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonLoadActionPerformed
 
     private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButtonSaveActionPerformed
 
     /**
@@ -138,7 +149,8 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
     }
-
+    File. f;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonLoad;
     private javax.swing.JButton jButtonSave;
